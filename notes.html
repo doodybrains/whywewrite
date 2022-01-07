@@ -1,0 +1,96 @@
+<!doctype HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>web work notes</title>
+<style>
+h1, h2, h3, h4, h5 {font-weight: normal !important;}
+</style>
+</head>
+<body>
+
+<h2>notes for getting started (on a mac)</h2>
+
+<h3>on computers and servers and files and folders...</h3>
+<p>
+Your computer has the possibility of being a server. All servers are computers. To be a server is to <i>serve</i> files to another computer. Which brings us to the fundamental point: all computers consist of are files and folders. This might be hard to wrap your head around in the age of "apps." But in the end, apps are files too. By this I mean, all of the code required by an app in order to open up and be of use to your on your computer or on your phone, needs to be stored in a file. Files with instructions to point to other files. 
+<br><br> 
+How do you organize your files? Do you know where your "home" folder is? Do you know how to see a list of all the files you have a saved on your Desktop? What's in your trash right now?
+</p>
+
+<h3>on the terminal...</h3>
+<p>
+The terminal is a text only tool for moving around your computer. Likely, you use a mouse or a touchpad to get around your computer. You are probably used to searching for documents in the search bar of a new Finder window. Or double clicking images only to watch them magically appear in Preview. Or dragging old PDFs into the trash. All of these things can be done using just your keyboard and the terminal. This is how computers were used before the invention of the graphical user interface. In a sense it was much more accessible and it can be argued that it calls for a more intimate relationship to your computer. 
+<br>
+<h4>some terminal commands we will use over and over...</h4>
+<ul>
+<li><code>cd</code></li>
+<li><code>cd ..</code></li>
+<li><code>cd <em>nameofsomefolderonyourcomputer</em></code></li>
+<li><code>pwd</code></li>
+<li><code>touch nameofnewfilethatyouwanttomake.html</code></li>
+<li><code>open nameoffilethatyouwanttoopen.html</code></li>
+</ul>
+
+
+</p>
+
+<h3>on git...</h3>
+<p>
+Git is a system for managing files. You know when you're writing something in a word doc and you save multiple versions: Final_Essay.docx, Final_Final_Essay.docx, Final_Final_Use_This_One.docx. Git allows you to for example only ever save one file because it tracks every single change you make so that if ever you wanted you could revert all of your changes back to a previous version. Its like a very powerful COMMAND-Z. Not only does it give you the possibility to revert, it also shows you exactly when and where things changed. This can be a nice things to look at if working on a piece of writing for a long time. Git, although commonly known to coders, is for files, any kind of files, and as long as you know a thing or two about files, you might as well know a thing or two about Git. Remind me to tell you about GitHub.
+</p>
+<p>it's possible that you already have git installed on your computer. you can check by opening terminal and writing <br><br>
+<code>git --version</code> <br><br> 
+and then pressing enter. <br><br> 
+if you do have it the terminal will return something like this <br><br>
+<code>git version 2.30.1 (Apple Git-130)</code> <br><br>
+if you don't, the terminal will prompt you to install an application called Command Line Tools, sometimes this takes a little while. Once the installation process is complete you can run the git --version command again to check that it was properly installed. 
+</p>
+<h4>some git commands we will use over and over...</h4>
+<ul>
+<li><code>git init</code></li>
+<li><code>git status</code></li>
+<li><code>git add -A</code></li>
+<li><code>git commit -m "something about the changes you have made to your files"</code></li>
+<li><code>git push origin main</code></li>
+<li><code>git pull</code></li>
+</ul>
+
+<h3>on github...</h3>
+<p>github is an extension of git. github is something you sign up for. github is something you can have a profile on. github is something you can follow other github users on. github is accessed through your browser at github.com. github is a host. github is where we will host all of our files so that other people can see them on the world wide web. please sign up for a github account with your student email!</p>
+
+<h4>signing up for github and making a repository for this semester...</h4>
+<p>everything you write should belong in one folder this semester. you can have as many files and folders inside that one folder as you like. the one folder will be tracked with git. you will upload it again and again to github. this one main folder is referred to as a repository. your repository name (on github) and your folder name (on your local computer) should be the same. here's how to set it all up (we will do this together).</p>
+<ol>
+<li>make a folder on your computer, ensure that you know how to navigate into it from terminal</li>
+<li>if my folder is on my desktop, and i've named it whywewrite, then in terminal i will write <code>cd Desktop/whywewrite</code></li>
+<li>next go to github.com, sign in to your account, click on the green button for creating a new repository. make it public, no need to check off anything else.</li>
+<li>
+now go back to terminal and write the following commands
+<ul>
+<li><code>echo "# a short message about this repository" >> README.md</code></li>
+<li><code>git init</code><br><small>you might see a message about the branch name master, you can ignore this for now, we will rename the branch to main shortly. but you should also see a message like this "Initialized empty Git repository in /Users/yourusername/yourfoldername/.git/"</small></li>
+<li><code>git add -A</code></li>
+<li><code>git commit -m "a short message about the changes you've made"</code><br><small>likely you can just write something like "add all files" or "my first commit"</li>
+<li><code>git branch -M main</code></li>
+<li><code>git remote add origin https://github.com/doodybrains/whywewrite.git</code></li>
+<li><code>git push -u origin main</code></li>
+</ul>
+</li>
+</ol>
+
+<h3>on workflow...</h3>
+<p>
+we will use these three tools: terminal, textedit and chrome. we will make, move, and open folders and files with terminal. we will edit, save and re-save files with textedit. you can view those files, as you save changes in textedit, in chrome. when you are ready to publish, use git and github. the biggest part of workflow is knowing the difference between your local work, the files that only exist on your computer, and remote work, the files that are copied over to a server (not your computer, likely a computer that GitHub owns in some server warehouse in Oregon). The purpose of a remote version of your work is so that other people, besides the people who have access to your computer (you, your friends? your colleagues? me?) can see it at some url, like, yourusername.github.io or tautological.pizza
+</p>
+
+
+<h3>on hosting and domain names...</h3>
+<p>we will all purchase one word domains. the only requirement is that it costs under $10/yr. this domain will point to your remote host: github, where all of your work for the semester will be located (in addition to being located on your local computer). 
+
+<h3>on front-end coding languages...</h3>
+<p>in this class we will learn HTML, CSS and Javascript. these are front-end languages for making websites. HTML is a markup language, CSS is a style language, Javascript is a programming language.</p>
+
+
+</body>
+</html>
