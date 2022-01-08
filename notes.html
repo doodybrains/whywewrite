@@ -5,7 +5,12 @@
 <title>web work notes</title>
 <style>
 h1, h2, h3, h4, h5 {font-weight: normal !important;}
+h3 {background-color: yellow;}
+code {color: blue;}
+ul li, ol li {margin: 5px 0;}
+body {padding-right: 30%}
 </style>
+
 </head>
 <body>
 
@@ -62,6 +67,13 @@ if you don't, the terminal will prompt you to install an application called Comm
 <h4>signing up for github and making a repository for this semester...</h4>
 <p>everything you write should belong in one folder this semester. you can have as many files and folders inside that one folder as you like. the one folder will be tracked with git. you will upload it again and again to github. this one main folder is referred to as a repository. your repository name (on github) and your folder name (on your local computer) should be the same. here's how to set it all up (we will do this together).</p>
 <ol>
+<li>first install a tool called homebrew with this command <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code><br><small>it will take a few minutes! follow the terminal prompts until the install is complete. at the end it will ask you to run two commands, one starting with echo, the other starting with eval.</small></li>
+<li>next, use homebrew to install github command line tools with <code>brew install gh	</code></li>
+
+<li>install the github command line tool with <code>brew install gh</code><br><small>these two tools will make it so that you only have to login to your github account from terminal once!</small></li>
+<li>now run <code>gh auth login</code> and follow prompts to login with your github credentials</li>
+<li>now run <code>gh auth login</code><br><small>choose GitHub.com, the HTTPS, then Y to authenticate, then login with a web browser. follow the steps to login in to your github account through the browser. upon completion go back to terminal and press enter.</li>
+
 <li>make a folder on your computer, ensure that you know how to navigate into it from terminal</li>
 <li>if my folder is on my desktop, and i've named it whywewrite, then in terminal i will write <code>cd Desktop/whywewrite</code></li>
 <li>next go to github.com, sign in to your account, click on the green button for creating a new repository. make it public, no need to check off anything else.</li>
@@ -71,7 +83,7 @@ now go back to terminal and write the following commands
 <li><code>echo "# a short message about this repository" >> README.md</code></li>
 <li><code>git init</code><br><small>you might see a message about the branch name master, you can ignore this for now, we will rename the branch to main shortly. but you should also see a message like this "Initialized empty Git repository in /Users/yourusername/yourfoldername/.git/"</small></li>
 <li><code>git add -A</code></li>
-<li><code>git commit -m "a short message about the changes you've made"</code><br><small>likely you can just write something like "add all files" or "my first commit"</li>
+<li><code>git commit -m "a short message about the changes you've made"</code><br><small>likely you can just write something like "add all files" or "my first commit"</small></li>
 <li><code>git branch -M main</code></li>
 <li><code>git remote add origin https://github.com/doodybrains/whywewrite.git</code></li>
 <li><code>git push -u origin main</code></li>
