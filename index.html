@@ -3,10 +3,35 @@
 <style>
 body {margin: 0;}
 iframe {border: none;}
+.frame {
+display: none;
+}
+.container {
+width: 900px;
+margin: 0 auto;
+position: relative;
+border: 3px solid white;
+}
+@media screen and (min-width: 820px) {
+.frame {
+display: block;
+position: absolute;
+top: 0;
+background: white;
+	}
+.frame.top { width: 100%; left: 0; height: 80px;}
+.frame.left { width: calc(5%); left: 0; height: 100vh;}
+.frame.right {width: calc(10%); right: 0; height: 100vh;}
+}
 </style>
 </head>
 <body>
-<iframe frameborder="0" width="100%" height="100%" src="https://docs.google.com/document/d/1mns1tPRZt64SAtvfDzQNzbiq654QlSQsGanqCP_5Hnw?rm=minimal"></iframe>
+<div class="container">
+<div class="frame top"></div>
+<div class="frame left"></div>
+<div class="frame right"></div>
+<iframe frameborder="0" width="100%" height="100%" src="https://docs.google.com/document/d/1dGHcPgGx1zdWyXuJMcNhSlza9WtJ_q3cvtMAjtWu1BA?rm=minimal"></iframe>
+</div>
 
 </body>
 </html>
