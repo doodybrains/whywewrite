@@ -18,10 +18,23 @@ display: block;
 position: absolute;
 top: 0;
 background: white;
+z-index: 1;
 	}
 .frame.top { width: 100%; left: 0; height: 80px;}
 .frame.left { width: calc(5%); left: 0; height: 100vh;}
 .frame.right {width: calc(10%); right: 0; height: 100vh;}
+}
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+left: 0;
+z-index: 2;
+padding: 4px;
+}
+nav a {
+color: red !important;
+padding: 0 5px;
 }
 </style>
 </head>
@@ -30,6 +43,10 @@ background: white;
 <div class="frame top"></div>
 <div class="frame left"></div>
 <div class="frame right"></div>
+<nav>
+<a href="index.html">homepage</a>
+<a href="notes.html">technical notes</a>
+</nav>
 <iframe frameborder="0" width="100%" height="100%" src="https://docs.google.com/document/d/1dGHcPgGx1zdWyXuJMcNhSlza9WtJ_q3cvtMAjtWu1BA?rm=minimal"></iframe>
 </div>
 

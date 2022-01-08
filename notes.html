@@ -9,10 +9,26 @@ h3 {background-color: yellow;}
 code {color: blue;}
 ul li, ol li {margin: 5px 0;}
 body {padding-right: 30%}
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+left: 0;
+z-index: 2;
+padding: 4px;
+}
+nav a {
+color: red !important;
+padding: 0 5px;
+}
 </style>
 
 </head>
 <body>
+<nav>
+<a href="index.html">homepage</a>
+<a href="notes.html">technical notes</a>
+</nav>
 <div class="frame top"></div>
 <div class="frame left"></div>
 <div class="frame right"></div>
