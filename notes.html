@@ -6,6 +6,7 @@
 <style>
 h1, h2, h3, h4, h5 {font-weight: normal !important;}
 h3 {background-color: yellow;}
+h4 {text-decoration: underline; margin-bottom: 0;}
 code {color: blue;}
 ul li, ol li {margin: 5px 0;}
 body {padding-right: 30%; padding-bottom: 120px; padding-top: 30px;}
@@ -25,48 +26,64 @@ padding: 0 5px;
 
 </head>
 <body>
-<nav>
-	<a href="index.html">www</a>
-	<a href="notes.html">technical notes</a>
-	<a href="https://docs.google.com/document/d/1lceNE5sAygto2zyg4u26MldpmAMoys2OVyvCPnChOzI/edit?usp=sharing" target="_blank">syllabus</a>
-	<a href="info.html">info</a> 
-</nav>
+	<nav>
+		<a href="index.html">www</a>
+		<a href="notes.html">technical notes</a>
+		<a href="https://docs.google.com/document/d/1lceNE5sAygto2zyg4u26MldpmAMoys2OVyvCPnChOzI/edit?usp=sharing" target="_blank">syllabus</a>
+		<a href="info.html">info</a> 
+	</nav>
 	<div class="frame top"></div>
 	<div class="frame left"></div>
 	<div class="frame right"></div>
 
-<h2>notes for getting started (on a mac)</h2>
+	<h2>notes for setting up a workflow in common...</h2>
 
-<h3>on computers and servers and files and folders...</h3>
+	<h3>folders and files</h3>
 	<p>
-	Your computer has the possibility of being a server. All servers are computers. To be a server is to <i>serve</i> files to another computer. Which brings us to the fundamental point: all computers consist of are files and folders. This might be hard to wrap your head around in the age of "apps." But in the end, apps are files too. By this I mean, all of the code required by an app in order to open up and be of use to your on your computer or on your phone, needs to be stored in a file. Files with instructions to point to other files. 
-	<br><br> 
-	How do you organize your files? Do you know where your "home" folder is? Do you know how to see a list of all the files you have a saved on your Desktop? What's in your trash right now?
+		Everything on your computer boils down to files. Your computer houses lots and lots of files. In web development term, all the files are <i>your</i> computer are considered <strong>local</strong>. When we are looking at websites on the WWW, again, we are looking at files. Except these files are on someone else's computer. Usually that someone else is a hosting provider. Some company that has bought many computers and put them in a warehouse and connected them to the backbone of the Internet. These computers are also called servers. All servers are really just computers. To be a server is to <i>serve</i> files to another computer. So when we go to a website, there is a computer, serving their files to to us through the browser. We will do the same thing in this class and use GitHub as our host. When we put our <strong>local</strong> files onto our GitHub servers, we are making them <strong>remote</strong>. 
+	</p>
+	<p>
+		So there will always be two versions of your work. Your local work. The files in your folder on <em>your</em> computer, and then your remote work, a copy of your local files on your GitHub server.
 	</p>
 
-	<h3>on the terminal...</h3>
+	<h3>
+		github  
+	</h3>
 	<p>
-	The terminal is a text only tool for moving around your computer. Likely, you use a mouse or a touchpad to get around your computer. You are probably used to searching for documents in the search bar of a new Finder window. Or double clicking images only to watch them magically appear in Preview. Or dragging old PDFs into the trash. All of these things can be done using just your keyboard and the terminal. This is how computers were used before the invention of the graphical user interface. In a sense it was much more accessible and it can be argued that it calls for a more intimate relationship to your computer. 
-	<br>
+		if you haven't already done so, sign up for a free GitHub account.
 	</p>
+	<p>github is an extension of git (explained below). github is something you can have a profile on. github is something you can follow other github users on. github is accessed through your browser at github.com. github is a host. github is where we will host all of our files so that other people can see them on the world wide web.</p>
 
-	<h4>some terminal commands we will use over and over...</h4>
+	<h4>github repositories</h4>
+	<p>everything you write should belong in one folder this semester. we called this folder memory. you can have as many files and folders inside that one folder as you like. we will upload this whole folder to GitHub <em>using git</em>. each week you will push up all your new files and changes to your github. your memory folder on your computer will be referred to as your local folder. your memory folder, on your github, will be referred to as your remote repository. your remote repository name (on github) and your local folder name (on your local computer) should be the same.</p>
+	<p>at this point you should have the following tools ready to hand:</p>
 	<ul>
-	<li><code>cd</code></li>
-	<li><code>cd ..</code></li>
-	<li><code>cd <em>nameofsomefolderonyourcomputer</em></code></li>
-	<li><code>pwd</code></li>
-	<li><code>touch nameofnewfilethatyouwanttomake.html</code></li>
-	<li><code>open nameoffilethatyouwanttoopen.html</code></li>
+		<li>a code editor, like VSCode or SublimeText or Atom</li>
+		<li>a GitHub account with a username and password</li>
+		<li>a folder on your computer named memory with three HTML files inside. these files should be named according to the exercise and the extension should be .html (no txt or rtf!)</li>
+		<li>
+			you should be able to open these files two different ways:
+			<ol>
+				<li>in your code editor. the easiest way to do this is to open your code editor first, then with File > Open... you can open your whole memory folder so that you can see all the HTML files inside</li>
+				<li>in the browser. anytime you double click an HTML file from your local computer, it will open in your default browser (i suggest making Chrome your default). You should see the content of your HTML page (not the code). when you open an HTML file on your computer, you are looking at the <em>local</em> version of your webpage. 
+			</ol>
+		</li>
 	</ul>
 
-
-	
-
-<h3>on git...</h3>
+	<h3>on workflow</h3>
 	<p>
-	Git is a system for managing files. You know when you're writing something in a word doc and you save multiple versions: Final_Essay.docx, Final_Final_Essay.docx, Final_Final_Use_This_One.docx. Git allows you to for example only ever save one file because it tracks every single change you make so that if ever you wanted you could revert all of your changes back to a previous version. Its like a very powerful COMMAND-Z. Not only does it give you the possibility to revert, it also shows you exactly when and where things changed. This can be a nice things to look at if working on a piece of writing for a long time. Git, although commonly known to coders, is for files, any kind of files, and as long as you know a thing or two about files, you might as well know a thing or two about Git. Remind me to tell you about GitHub.
+		we will use these three tools: terminal, a code editor and chrome. we will make, move, and open folders and files with terminal. we will edit, save and re-save files with the code editor. you can view the local version of your files (web pages) in chrome as you go. when you are ready to publish them to the www, you will use git and github. the biggest part of workflow is knowing the difference between your local work, the files that only exist on your computer, and remote work, the files that are copied over to your GitHub server (not your computer, likely a computer that GitHub owns in some server warehouse in Oregon). The purpose of a remote version of your work is so that other people, besides the people who have access to your computer (you, your friends? your colleagues? me?) can see it at some url, like, yourusername.github.io or tautological.pizza
 	</p>
+
+	<h3>on git</h3>
+	<p>
+	Git is a system for managing files. You know when you're writing something in a word doc and you save multiple versions: Final_Essay.docx, Final_Final_Essay.docx, Final_Final_Use_This_One.docx. Git allows you to for example only ever save one file because it tracks every single change you make so that if ever you wanted you could revert all of your changes back to a previous version. Its like a very powerful COMMAND-Z. Not only does it give you the possibility to revert, it also shows you exactly when and where things changed. This can be a nice things to look at if working on a piece of writing for a long time. Git, although commonly known to coders, is for files, any kind of files, and as long as you know a thing or two about files, you might as well know a thing or two about Git. 
+	</p>
+	<p>the difference between Git and GitHub can be thought of like this: Git is a technology for tracking files on your local computer. GitHub is an application for tracking those files on a GitHub server mostly so that other people (for example, Ariel and I) can see your files or collaborate with you on your files <em>and</em> so that you can publish them to the WWW.</p>
+	<p>we will use the technology of Git to keep track of and push our files up to GitHub</p>
+
+	<h4>installation of git</h4>
+	<h4>on a mac...</h4>
 	<p>
 	it's possible that you already have git installed on your computer. you can check by opening terminal and writing <br><br>
 	<code>git --version</code> <br><br> 
@@ -75,66 +92,22 @@ padding: 0 5px;
 	<code>git version 2.30.1 (Apple Git-130)</code> <br><br>
 	if you don't, the terminal will prompt you to install an application called Command Line Tools, sometimes this takes a little while. Once the installation process is complete you can run the git --version command again to check that it was properly installed. 
 	</p>
-	<h4>some git commands we will use over and over...</h4>
-<ul>
-<li><code>git init</code></li>
-<li><code>git status</code></li>
-<li><code>git add -A</code></li>
-<li><code>git commit -m "something about the changes you have made to your files"</code></li>
-<li><code>git push origin main</code></li>
-<li><code>git pull</code></li>
-</ul>
+	<h4>on windows...</h4>
+	<ol>
+		<li>Sign up for an account at GitHub.com if you haven’t already. Download the latest <a href="https://gitforwindows.org/" target="_blank">Git for Windows installer</a>.</li>
 
-<h3>on github...</h3>
-	<p>github is an extension of git. github is something you sign up for. github is something you can have a profile on. github is something you can follow other github users on. github is accessed through your browser at github.com. github is a host. github is where we will host all of our files so that other people can see them on the world wide web. please sign up for a github account with your student email!</p>
+		<li>When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation.</li>
 
-<h4>signing up for github and making a repository for this semester...</h4>
-	<p>everything you write should belong in one folder this semester. you can have as many files and folders inside that one folder as you like. the one folder will be tracked with git. you will upload it again and again to github. this one main folder is referred to as a repository. your repository name (on github) and your folder name (on your local computer) should be the same. here's how to set it all up (we will do this together).</p>
-<ol>
-<li>first install a tool called homebrew with this command <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code><br><small>it will take a few minutes! follow the terminal prompts until the install is complete. at the end it will ask you to run two commands, one starting with echo, the other starting with eval.</small></li>
-<li>next, use homebrew to install github command line tools with <code>brew install gh	</code></li>
-
-<li>install the github command line tool with <code>brew install gh</code><br><small>these two tools will make it so that you only have to login to your github account from terminal once!</small></li>
-<li>now run <code>gh auth login</code> and follow prompts to login with your github credentials</li>
-<li>now run <code>gh auth login</code><br><small>choose GitHub.com, the HTTPS, then Y to authenticate, then login with a web browser. follow the steps to login in to your github account through the browser. upon completion go back to terminal and press enter.</small></li>
-
-<li>make a folder on your computer, ensure that you know how to navigate into it from terminal</li>
-<li>if my folder is on my desktop, and i've named it whywewrite, then in terminal i will write <code>cd Desktop/whywewrite</code></li>
-<li>next go to github.com, sign in to your account, click on the green button for creating a new repository. make it public, no need to check off anything else.</li>
-<li>
-now go back to terminal and write the following commands
-</li>
-<ul>
-<li><code>echo "# a short message about this repository" >> README.md</code></li>
-<li><code>git init</code><br><small>you might see a message about the branch name master, you can ignore this for now, we will rename the branch to main shortly. but you should also see a message like this "Initialized empty Git repository in /Users/yourusername/yourfoldername/.git/"</small></li>
-<li><code>git add -A</code></li>
-<li><code>git commit -m "a short message about the changes you've made"</code><br><small>likely you can just write something like "add all files" or "my first commit"</small></li>
-<li><code>git branch -M main</code></li>
-<li><code>git remote add origin https://github.com/doodybrains/whywewrite.git</code></li>
-<li><code>git push -u origin main</code></li>
-</ul>
-</li>
-</ol>
-
-<h3>on workflow...</h3>
-	<p>
-	we will use these three tools: terminal, textedit and chrome. we will make, move, and open folders and files with terminal. we will edit, save and re-save files with textedit. you can view those files, as you save changes in textedit, in chrome. when you are ready to publish, use git and github. the biggest part of workflow is knowing the difference between your local work, the files that only exist on your computer, and remote work, the files that are copied over to a server (not your computer, likely a computer that GitHub owns in some server warehouse in Oregon). The purpose of a remote version of your work is so that other people, besides the people who have access to your computer (you, your friends? your colleagues? me?) can see it at some url, like, yourusername.github.io or tautological.pizza
-	</p>
-
-
-<h3>on hosting and domain names...</h3>
-	<p>we will all purchase one word domains. the only requirement is that it costs under $10/yr. this domain will point to your remote host: github, where all of your work for the semester will be located (in addition to being located on your local computer). </p>
-<ol>
-<li>log into your github.com account, go to your main repository, click on the Settings tab</li>
-<li>scroll down and click Pages</li>
-<li>Under Source, choose main and press Save</li>
-<li>Type in your chosen domain name (week 3)</li>
-<li>We will go over together how to <a target="_blank" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">configure your domain name</a>!</li>
-</ol>
-
-<h3>on front-end coding languages...</h3>
-	<p>in this class we will learn HTML, CSS and Javascript. these are front-end languages for making websites. HTML is a markup language, CSS is a style language, Javascript is a programming language.</p>
-
+		<li>Open the Command Prompt.
+			<ol>
+				<li>Move the mouse pointer to the bottom-left corner of the screen and Right-click, or press Windows key + X.</li>
+				<li>In the power user task menu, select Command Prompt (Admin)</li>
+			</ol>
+			
+		</li>
+		<li>Run the following commands to configure your Git username and email using the following commands, replacing name with your own. These details will be associated with any commits that you create:<br>
+		<code>$ git config --global user.name "your user name" $ git config --global user.email "youremail@email.com"</code></li>
+	</ol>
 
 </body>
 </html>
