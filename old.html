@@ -1,0 +1,99 @@
+<h3>on computers and servers and files and folders...</h3>
+	<p>
+	Your computer metal and hot and complicated has <strong>the possibility of being a server</strong> 
+
+<small>
+
+
+
+kjsadna;kjsndakjsndak;jnsd
+
+
+
+
+
+
+
+
+
+</small>. 
+	<br><br> 
+	How do you organize your files? Do you know where your "home" folder is? Do you know how to see a list of all the files you have a saved on your Desktop? What's in your trash right now?
+	</p>
+
+	<h3>on the terminal...</h3>
+	<p>
+	The terminal is a text only tool for moving around your computer. Likely, you use a mouse or a touchpad to get around your computer. You are probably used to searching for documents in the search bar of a new Finder window. Or double clicking images only to watch them magically appear in Preview. Or dragging old PDFs into the trash. All of these things can be done using just your keyboard and the terminal. This is how computers were used before the invention of the graphical user interface. In a sense it was much more accessible and it can be argued that it calls for a more intimate relationship to your computer. 
+	<br>
+	</p>
+
+	<h4>some terminal commands we will use over and over...</h4>
+	<ul>
+	<li><code>cd</code></li>
+	<li><code>cd ..</code></li>
+	<li><code>cd <em>nameofsomefolderonyourcomputer</em></code></li>
+	<li><code>pwd</code></li>
+	<li><code>touch nameofnewfilethatyouwanttomake.html</code></li>
+	<li><code>open nameoffilethatyouwanttoopen.html</code></li>
+	</ul>
+
+
+	
+
+
+	<h4>some git commands we will use over and over...</h4>
+<ul>
+<li><code>git init</code></li>
+<li><code>git status</code></li>
+<li><code>git add -A</code></li>
+<li><code>git commit -m "something about the changes you have made to your files"</code></li>
+<li><code>git push origin main</code></li>
+<li><code>git pull</code></li>
+</ul>
+
+<h3>on github...</h3>
+	
+<ol>
+<li>first install a tool called homebrew with this command <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code><br><small>it will take a few minutes! follow the terminal prompts until the install is complete. at the end it will ask you to run two commands, one starting with echo, the other starting with eval.</small></li>
+<li>next, use homebrew to install github command line tools with <code>brew install gh	</code></li>
+
+<li>install the github command line tool with <code>brew install gh</code><br><small>these two tools will make it so that you only have to login to your github account from terminal once!</small></li>
+<li>now run <code>gh auth login</code> and follow prompts to login with your github credentials</li>
+<li>now run <code>gh auth login</code><br><small>choose GitHub.com, the HTTPS, then Y to authenticate, then login with a web browser. follow the steps to login in to your github account through the browser. upon completion go back to terminal and press enter.</small></li>
+
+<li>make a folder on your computer, ensure that you know how to navigate into it from terminal</li>
+<li>if my folder is on my desktop, and i've named it whywewrite, then in terminal i will write <code>cd Desktop/whywewrite</code></li>
+<li>next go to github.com, sign in to your account, click on the green button for creating a new repository. make it public, no need to check off anything else.</li>
+<li>
+now go back to terminal and write the following commands
+</li>
+<ul>
+<li><code>echo "# a short message about this repository" >> README.md</code></li>
+<li><code>git init</code><br><small>you might see a message about the branch name master, you can ignore this for now, we will rename the branch to main shortly. but you should also see a message like this "Initialized empty Git repository in /Users/yourusername/yourfoldername/.git/"</small></li>
+<li><code>git add -A</code></li>
+<li><code>git commit -m "a short message about the changes you've made"</code><br><small>likely you can just write something like "add all files" or "my first commit"</small></li>
+<li><code>git branch -M main</code></li>
+<li><code>git remote add origin https://github.com/doodybrains/whywewrite.git</code></li>
+<li><code>git push -u origin main</code></li>
+</ul>
+</li>
+</ol>
+
+<h3>on workflow...</h3>
+	<p>
+	
+	</p>
+
+
+<h3>on hosting and domain names...</h3>
+	<p>we will all purchase one word domains. the only requirement is that it costs under $10/yr. this domain will point to your remote host: github, where all of your work for the semester will be located (in addition to being located on your local computer). </p>
+<ol>
+<li>log into your github.com account, go to your main repository, click on the Settings tab</li>
+<li>scroll down and click Pages</li>
+<li>Under Source, choose main and press Save</li>
+<li>Type in your chosen domain name (week 3)</li>
+<li>We will go over together how to <a target="_blank" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">configure your domain name</a>!</li>
+</ol>
+
+<h3>on front-end coding languages...</h3>
+	<p>in this class we will learn HTML, CSS and Javascript. these are front-end languages for making websites. HTML is a markup language, CSS is a style language, Javascript is a programming language.</p>
