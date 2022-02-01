@@ -1,0 +1,142 @@
+<!doctype HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>www html reference</title>
+<style>
+h1, h2, h3, h4, h5 {font-weight: normal !important;}
+h3 {background-color: yellow;}
+h4 {text-decoration: underline; margin-bottom: 0;}
+code {color: blue;}
+ul li, ol li {margin: 5px 0;}
+body {padding-bottom: 120px; padding-top: 30px;}
+nav.main-nav {
+position: fixed;
+top: 0;
+width: 100%;
+left: 0;
+z-index: 2;
+padding: 4px;
+}
+nav.main-nav a {
+color: red !important;
+padding: 0 5px;
+}
+h2 a {
+	background: black;
+	color:  aquamarine;
+	font-family: monospace;
+}
+h2 a:hover {
+	background: red;
+	color:  black;
+}
+img {
+	display: block;
+	width: 80%;
+	margin-top: 80px;
+}
+</style>
+</head>
+<body>
+	<nav class="main-nav">
+		<a href="index.html">www</a>
+		<a href="notes.html">technical notes</a>
+		<a href="https://docs.google.com/document/d/1lceNE5sAygto2zyg4u26MldpmAMoys2OVyvCPnChOzI/edit?usp=sharing" target="_blank">syllabus</a>
+		<a href="info.html">info</a> 
+	</nav>
+	<br><br><br>
+	<em>Right click on this page and choose Inspect Element to see the HTML for this page, you can find my lecture notes (as HTML comments) there!</em>
+	<br><br>
+
+	<!-- 
+	I want to introduce you to DNS, which is an acronym for Domain Name System which is how we are able to type something like whywewrite.world or google.com into our browsers and get returned a website. I’ll also go over HTTPS and some basic internet materiality stuff, the point being to introduce ourselves to the physicality of the Internet and mechanics of its infrastructure.  -->
+
+	<h2>DNS, HTTP, INFRASTRUCTURE</h2>
+
+	<!-- 	
+	In order to get to and interact with the website located at the address whywewrite.world from your own personal computer, a lot of stuff needs to happen. When you type a url, which is an acronym for uniform resource locator, into the browser, the browser makes a call to the domain name system, which is like a big address book, but instead of looking for whywewrite.world, its going to look for the domain names correlated IP address. IP addresses are domain names but written in numbers, so it really is more like a phone book. so DNS is a database that  helps us makes for requests to servers. -->
+
+	<img src="www-ss.png" alt="screenshot of whywewrite.world website against default purple and pink apple background" />
+
+	<!-- 
+	Usually the browser, together with your Internet Service Provider, will have to take your request for a domain name to whats called the resolver. The resolver is a computer, owned by your ISP that tells you where to locate the top level domain server (like .com or .net) The TLD knows has access to the websites name servers, and the name servers gives answers to DNS queries by giving the resolver the correlated IP address. Then the resolver brings the IP address back to the browser and milliseconds later the browser will make a call to that IP address.
+	-->
+
+	<img src="dig.png" alt="screenshot of making a dig request in terminal for whywewrite.world" />
+
+	<!-- 	
+		Once it know which IP address to get in touch with your computer, through your browser, uses HTTP, Hyper Text Transfer Protocol, to deliver to you the website you want to visit. What's really happening is your computer is sending a text message also known as a GET request, which contains the words GET, the name of the server, and the server is listening for these requests.
+
+		So a very basic rundown: The browser connects to DNS and retrieves the corresponding IP address for the web server. The browser connects to the web server and then sends an HTTP request for the web page you want to vist. The browser then goes through the index.html page or whatever specific page you asked it to load and looks for things included on the page like videos or images. For these the browser makes additional connections and HTTP requests to the server for each element. This is why pages load slower when they have large images or videos on them. 
+	-->
+
+	<img src="https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper_files/ruswp_diag1.gif" />
+	<small>from Stanford's <em>How Does the Internet Work</em></small>
+
+
+	<!--
+		The Internet sends around bits of information, or on or off, or binary code. 8 bits strung together is a bite. a song, for example, is around 3 megabytes, or 8 million bites. so when we talk about bandwidth, we're talking about how many bits we can send over a given period of time. meaning that when you download a song, from the proprietary music service that shall not be named, and it takes 3 seconds, that means the bit rate is 8 million bits per second, which is pretty fast, and now its a question of how things are done with such speed.
+	-->
+
+	<img style="width: 50%;" src="binary.jpeg" />
+
+	<!-- 
+		And a very fast thing in our physical world, is light. So the internet is made up of fiber optic cables that transport bits as light beams from one place to another. Fiber optic cables are threads of glass made to reflect light. So when the light travels through the cable its beaming up and down within the cable at different angles, meaning we can send multiple beams of light, or multiple streams of bits, at the same time. And because the speed and stability with which light travels, in that its doesn't change over distance, fiber optics cables are what are used to connect servers around the world. So the backbone of internet is not in the cloud, its under the ocean. However, when we use wifi, we are connecting the the Internet without cables, and our bits get converted in to radio waves, and then back into bits on the receiving end but waves don't travel as far as light and that is why sometimes you need to move your router from one room to another. Ultimately wireless routers connect back to the backbone of the Internet, back to the fiber optics cables underneath the ground. And so we can understand how we go to conceptualize the internet as a cloud and how that conceptualization was kind of dangerous because it made us think about the Internet as something ephemeral and perhaps without environmental consequences but its relatively common knowledge now that Internet infrastructure is damaging. Ingrid Burrington, who does a lot of research on the physicality of the Internet wrote this piece on the environmental toll of a Netflix binge: "One study (weirdly enough, sponsored by the American Coal Association, its purpose to enthuse about how great coal is for technology) estimated that a smartphone streaming an hour of video on a weekly basis uses more power annually than a new refrigerator."
+	-->
+
+	<img src="https://d2w9rnfcy7mm78.cloudfront.net/1517221/original_444ad618c82c3c0bc9730c653c2ff8b1.jpg?1513637953?bc=1" />
+
+
+	<!-- 
+
+	SETTING UP GITHUB PAGES
+		First, lets purchase domain names. one word. choose one that is under $5 a year. 
+
+		On GitHub, navigate to your site's repository.
+
+		Under your repository name, click Settings.
+		Repository settings button
+
+		Click  Pages.
+
+		Under "Custom domain", type your custom domain, then click Save. This will create a commit that adds a CNAME file in the root of your publishing source.
+		
+		Save custom domain button.
+
+		A Record
+		@	
+		185.199.108.153
+		A Record	
+		@
+		185.199.109.153
+		A Record	
+		@
+		185.199.110.153
+		A Record	
+		@
+		185.199.111.153
+		CNAME Record	
+		www
+		doodybrains.github.io.
+
+
+
+		Open Terminal.
+
+		To confirm that your DNS record configured correctly, use the dig command, replacing WWW.EXAMPLE.COM with your subdomain.
+
+		$ dig WWW.EXAMPLE.COM +nostats +nocomments +nocmd
+		    > ;WWW.EXAMPLE.COM.                     IN      A
+		    > WWW.EXAMPLE.COM.              3592    IN      CNAME   YOUR-USERNAME.github.io.
+		    > YOUR-USERNAME.github.io.      43192   IN      CNAME    GITHUB-PAGES-SERVER .
+		    >  GITHUB-PAGES-SERVER .         22      IN      A       192.0.2.1	
+	-->
+
+	<!-- 	
+	-->
+
+	<!-- 	
+	-->
+</body>
+</html>
