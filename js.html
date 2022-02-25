@@ -3,36 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>www html reference</title>
-	<style>
-
-	body {padding-right: 30%; padding-bottom: 120px; padding-top: 30px;}
-	nav.main-nav {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	left: 0;
-	z-index: 2;
-	padding: 4px;
-	}
-	nav.main-nav a {
-	color: red !important;
-	padding: 0 5px;
-	}
-	h1,h2,h3 {
-		font-weight: normal;
-	}
-	code {
-		color:  blue;
-	}
-	.cloud-texture {
-		text-shadow:  3px 3px 10px aquamarine;
-	}
-	#the-internet {
-		color:  red;
-		transform: rotate(5deg);
-		margin-top:  80px;
-	}
-	</style>
+<link href="example.css" rel="stylesheet">
 </head>
 <body>
 	<nav class="main-nav">
@@ -152,30 +123,6 @@ function theInternetIs() {
 }
 </pre>
 
-<script>
-let message = document.getElementById("the-internet");
-let count = 0;
-document.body.addEventListener("click", theInternetIs)
-
-
-function theInternetIs() {
-	count++
-	if (message.innerHTML === "the internet is in the ground") {
-		message.innerHTML = "the internet is in the clouds";
-		message.classList.add("cloud-texture");
-	} else if (count >=3) {
-		message.innerHTML = "click this page to find out where the internet is...";
-		count = 0;
-		if (message.classList.contains("cloud-texture")) {
-			message.classList.remove("cloud-texture");
-		}
-	} else {
-		message.innerHTML = "the internet is in the ground";
-		if (message.classList.contains("cloud-texture")) {
-			message.classList.remove("cloud-texture");
-		}
-	}
-}
-</script>
+<script src="example.js"></script>
 </body>
 </html>
