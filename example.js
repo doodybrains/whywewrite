@@ -5,9 +5,12 @@ let count = 0;
 document.body.addEventListener("click", theInternetIs)
 // make sure the whole entire body of the html document is listening for someone to click on it, when someone does click on it, call the function called "theInternetIs"
 
+window.addEventListener("scroll", theInternetIs)
+// make sure the whole entire window is also listening for someone to do something, in this case, scroll
 function theInternetIs() {
 	// declare a new function called theInternetIs
 	count++
+	console.log(count)
 	// everytime this function is called, add 1 to the count variable
 	if (message.innerHTML === "the internet is in the ground") {
 		// check if the message variable, declared above, has text inside it that says "the internet is in the ground", if it does do the following:
